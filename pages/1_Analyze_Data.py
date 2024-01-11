@@ -87,6 +87,10 @@ if comparison_mode:
 
     # Set x-axis interval to 5 minutes
     interval = 5
+    # For comparison mode - set y-axis range for both figures
+    fig_1.update_layout(yaxis=dict(range=[24, data_1[['sensor1', 'sensor2', 'sensor3', 'sensor4', 'sensor5', 'sensor6']].max().max() + 5]))
+    fig_2.update_layout(yaxis=dict(range=[24, data_2[['sensor1', 'sensor2', 'sensor3', 'sensor4', 'sensor5', 'sensor6']].max().max() + 5]))
+
     fig_2.update_layout(xaxis=dict(tickmode='linear', tick0=0, dtick=interval))
 
 
@@ -130,6 +134,9 @@ else:
 
     # Set x-axis interval to 5 minutes
     interval = 5
+    # For single-file mode - set y-axis range for the figure
+    fig.update_layout(yaxis=dict(range=[22, data[['sensor1', 'sensor2', 'sensor3', 'sensor4', 'sensor5', 'sensor6']].max().max() + 5]))
+
     fig.update_layout(xaxis=dict(tickmode='linear', tick0=0, dtick=interval))
 
     # Display the chart

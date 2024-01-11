@@ -1,18 +1,30 @@
+
 import streamlit as st
+import pandas as pd
+import plotly.graph_objects as go
+import os
 
+st.set_page_config(page_title="Analyze Data", page_icon="📈")
 
-st.set_page_config(
-    page_title="Description",
-    page_icon="📜",
-)
-st.write("# Description of Heating Element Patterns")
+# ... (your existing code)
 
+# Display images from the "patterns" folder
+pattern_folder = "patterns"
+pattern_images = os.listdir(pattern_folder)
 
-st.markdown(
-    """
-    In this page you will find the description of the different heting element patterns that we used for observing
-    the temperatures. 
+if pattern_images:
+    st.header("Pattern Images")
+    
+    num_images_to_display = 5
+    selected_images = pattern_images[:num_images_to_display]
 
-    # Tem
-    """
-)
+    for image_filename in selected_images:
+        image_path = os.path.join(pattern_folder, image_filename)
+        st.image(image_path, caption=f"Pattern Image: {image_filename}", use_column_width=True)
+
+        # Display title below each image
+        image_title = st.text_input(f"Title for {image_filename}:", key=image_filename)
+        #st.write(f"Title: {image_title}")
+
+else:
+    st.warning("No images found in the 'patterns' folder.")

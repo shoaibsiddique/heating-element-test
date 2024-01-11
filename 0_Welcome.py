@@ -20,7 +20,7 @@ LOGGER = get_logger(__name__)
 
 def run():
     st.set_page_config(
-        page_title="Hello to Warm Kussens",
+        page_title="Hello to Warm Kussens ",
         page_icon="👋",
     )
     st.write("# Welcome to Temperature Data Analysis for Warm Kussens!")
