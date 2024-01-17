@@ -39,6 +39,7 @@ if comparison_mode:
         'Pattern # 001 with S&H Circuit': 'DATALOG_001SH.TXT',
         'Pattern # 002 Run for 1 Hours': 'DATALOG_002.TXT',
         'Pattern # 002 with S&H Circuit': 'DATALOG_002SH.TXT',
+        'Pattern # 003 Run for 1 Hours': 'DATALOG_003.TXT',
         'Pattern # 004 Run for 1 Hours': 'DATALOG_004.TXT',
         'Pattern # 004 with S&H Circuit': 'DATALOG_004SH.TXT'
     }
@@ -107,6 +108,7 @@ else:
         'Pattern # 001 with S&H Circuit': 'DATALOG_001SH.TXT',
         'Pattern # 002 Run for 1 Hours': 'DATALOG_002.TXT',
         'Pattern # 002 with S&H Circuit': 'DATALOG_002SH.TXT',
+        'Pattern # 003 Run for 1 Hours': 'DATALOG_003.TXT',
         'Pattern # 004 Run for 1 Hours': 'DATALOG_004.TXT',
         'Pattern # 004 with S&H Circuit': 'DATALOG_004SH.TXT'
     }
